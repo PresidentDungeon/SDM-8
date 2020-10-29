@@ -13,7 +13,7 @@ namespace Services
 
         public TeamService(ITeamRepository teamRepository)
         {
-            this.TeamRepository = TeamRepository;
+            this.TeamRepository = teamRepository ?? throw new ArgumentException("TeamRepository is missing");
         }
 
         public Team createTeam(int id, string teamName)
