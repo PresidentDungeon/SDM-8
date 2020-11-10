@@ -23,7 +23,7 @@ namespace XUnitTestProject
         [Fact]
         public void CreateStudentService_WithValidRepository()
         {
-            // arrange
+            // arranges
             var repo = repoMock.Object;
 
             // act
