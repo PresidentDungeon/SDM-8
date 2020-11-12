@@ -2,7 +2,7 @@ name: .NET Core
 
 on:
   pull_request_target:
-    branches: [ master, develop ]
+    branches: [ master, Develop ]
 
 jobs:
   build:
