@@ -1,0 +1,7 @@
+language: csharp
+mono: none
+dotnet: 3.1.401
+solution: finalProjectRegistration.sln
+script:
+ - dotnet build
+ - dotnet test

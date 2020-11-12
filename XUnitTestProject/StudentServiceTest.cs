@@ -18,12 +18,13 @@ namespace XUnitTestProject
             repoMock = new Mock<IStudentRepository>();
         }
 
+        //here is our tests. Very nice.
         #region CreateStudentService
 
         [Fact]
         public void CreateStudentService_WithValidRepository()
         {
-            // arrange
+            // arranges
             var repo = repoMock.Object;
 
             // act
@@ -119,7 +120,7 @@ namespace XUnitTestProject
                 Email = email
             };
 
-            // make sure the student does not exist before test
+            // make sure the student does not exist before test - t
             repoMock.Setup(repo => repo.GetById(It.Is<int>(z => z == student.Id))).Returns(() => null);
 
             StudentService service = new StudentService(repoMock.Object);
